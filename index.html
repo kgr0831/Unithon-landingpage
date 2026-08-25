@@ -59,14 +59,10 @@ section{position:relative;border-top:1px solid var(--line)}
 header{position:sticky;top:0;z-index:40;height:78px;display:flex;align-items:center;justify-content:space-between;
   padding:0 var(--pad);border-bottom:1px solid transparent;transition:height .35s var(--ease),background .35s,border-color .35s,backdrop-filter .35s}
 header.shrink{height:62px;border-bottom-color:var(--line);background:rgba(10,10,10,.72);backdrop-filter:blur(18px) saturate(1.4)}
-.brand{display:flex;align-items:center;gap:11px;color:#fff;text-decoration:none}
-.brand > span{position:relative;width:38px;height:38px;display:grid;place-items:center;overflow:hidden;
-  background:#fff;color:#111;font:900 14px/1 var(--mono);transition:transform .5s var(--ease)}
-.brand:hover > span{transform:rotate(-90deg)}
-.brand > span::after{position:absolute;inset:0;background:linear-gradient(115deg,transparent 38%,rgba(255,255,255,.9) 50%,transparent 62%);content:'';animation:sweep 3.4s ease-in-out infinite}
-@keyframes sweep{0%,70%{transform:translateX(-130%)}100%{transform:translateX(130%)}}
-.brand strong{font-size:13px;letter-spacing:.02em}
-.brand small{padding-left:11px;border-left:1px solid rgba(255,255,255,.15);color:#666;font:8px/1 var(--mono);letter-spacing:.16em}
+.brand{display:flex;align-items:center;gap:8px;color:#fff;text-decoration:none}
+.brand-logo{position:relative;display:block;width:140px;height:78px;overflow:hidden;background:#fff}
+.brand-logo img{position:absolute;top:-25px;left:0;width:140px;height:140px;max-width:none}
+.brand small{padding-left:8px;border-left:1px solid rgba(255,255,255,.15);color:#666;font:8px/1 var(--mono);letter-spacing:.16em}
 header nav{display:flex;align-items:center;gap:clamp(16px,3vw,34px)}
 header nav a{position:relative;color:#777;font:9px/1 var(--mono);letter-spacing:.14em;text-decoration:none;transition:color .25s}
 header nav a:not(.cta)::after{position:absolute;left:0;bottom:-7px;width:100%;height:1px;background:#fff;
@@ -271,7 +267,7 @@ footer a:hover{color:#fff}
 <div class="grain" aria-hidden="true"></div>
 
 <header id="hdr">
-  <a class="brand" href="#top"><span>P</span><strong>PAPERBRIDGE</strong><small>RESEARCH AI</small></a>
+  <a class="brand" href="#top"><span class="brand-logo"><img src="assets/paperbridge-logo.png" alt="PaperBridge"></span><small>RESEARCH AI</small></a>
   <nav aria-label="주 메뉴">
     <a href="#why">PROBLEM</a>
     <a href="#flow">HOW IT WORKS</a>
